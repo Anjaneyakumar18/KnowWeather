@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>☄️ Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="introOverlay">
+    <h1 class="fade-in">☀️ Welcome to Weather Forecast</h1>
+  </div>
+
+  <h1>Enter your city name and know the weather out there!!</h1>
+  <input type="text" id="cityInput" placeholder="Enter city or village name" />
+  <button id="getWeatherBtn">Get Weather</button>
+
+  <div id="topCities"></div>
+
+  <div id="currentWeather" style="display:none;">
+    <video id="rainVideo" autoplay muted loop>
+      <source src="Animated_Raining_with_Lightings.mp4" type="video/mp4" />
+    </video>
+    <video id="sunnyVideo" autoplay muted loop>
+      <source src="sunny.mp4" type="video/mp4" />
+    </video>
+    <video id="cloudyVideo" autoplay muted loop>
+      <source src="clouds.mp4" type="video/mp4" />
+    </video>
+    <img id="clearImg" src="clear.png" alt="Clear Sky" />
+
+    <div class="content">
+      <h2 id="locationTitle">--</h2>
+      <p><strong>Temp:</strong> <span id="temp">--</span> °C</p>
+      <p><strong>Description:</strong> <span id="desc">--</span></p>
+      <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+      <p><strong>Wind:</strong> <span id="wind">--</span> m/s</p>
+    </div>
+  </div>
+
+  <div class="forecast" id="forecast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
